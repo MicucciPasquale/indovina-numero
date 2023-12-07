@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indovina il Numero</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="image/question.svg">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+
+
+
+
+
+
+<body>
+    <img src="image/meteor.svg" alt="Descrizione dell'immagine" style="float: left; margin-right: 20px;">
+  
+  
+    <div id="container">
+        <h1>Indovina  il  Numero</h1>
+        <h2>Prova a indovinare il numero tra 1 e 20 scelto dal computer!</h2>
+        <p id="output">?</p>
+        <input type="number" id="guess" placeholder="Inserisci il tuo numero">
+        <button onclick="checkGuess()">Verifica</button>   
+    </div>
+   
+
+
+<div id="container1">
+    <div id="info-container">
+        <p id="attempts">Tentativi rimasti: <span id="attempts-left">5</span></p>
+        <p id="record">Record precedente: <span id="previous-record">0</span></p>
+    </div>
+</div>
+
+
+</body>
+<script src="index.js"></script>
+</html>
