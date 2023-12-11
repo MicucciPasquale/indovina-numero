@@ -9,6 +9,9 @@ body {
     background-color: rgb(115, 248, 248);
 }
 
+label{
+    font-family:'Rubik Bubbles';
+}
 
 
 #feedback-form {
