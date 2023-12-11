@@ -28,6 +28,12 @@ function checkGuess() {
     }
 }
 */
+document.getElementById('guess').addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+        checkGuess();
+    }
+});
+
 function checkGuess() {
     var userGuess = document.getElementById('guess').value;
     var outputParagraph = document.getElementById('output');
@@ -49,10 +55,15 @@ function checkGuess() {
             document.getElementById('attempts-left').innerHTML = attemptsLeft;
             randomNumber = Math.floor(Math.random() * 20) + 1;
         } else {
-            outputParagraph.innerHTML = 'Ritenta!';
+            if (userGuess < randomNumber) {
+                outputParagraph.innerHTML = 'Il numero è troppo piccolo. Ritenta!';
+            } else {
+                outputParagraph.innerHTML = 'Il numero è troppo grande. Ritenta!';
+            }
             outputParagraph.style.fontSize = '50px'; 
             outputParagraph.style.color="blue";
         }
     }
+    document.getElementById('guess').value = '';
 }
 
